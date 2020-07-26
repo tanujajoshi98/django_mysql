@@ -1,0 +1,31 @@
+
+
+
+<html>
+<body>
+
+<h1>Showing records</h1>
+<table border='1' width="100">
+<tr>
+<td>Username</td>
+<td>Password</td>
+<td>Phone No.</td>
+<td>Address</td>
+</tr>
+
+{% for student in records %}
+<tr>
+<td>{{ student.username }}</td>
+<td>{{ student.password }}</td>
+<td>{{ student.number }}</td>
+<td>{{ student.address }}</td>
+</tr>
+
+
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

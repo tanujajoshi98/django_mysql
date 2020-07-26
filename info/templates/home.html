@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+ {% block  content%}
+
+
+<h1>Info</h1>
+{{tdate}}
+
+
+    <form method ='POST'>
+    {% csrf_token %}
+    username  : <input type ="text" name="username" required><br>
+    password   : <input type ="text" name="password" required ><br>
+    number   : <input type ="text" name="number" required><br>
+    address   : <input type ="text" name="address" required><br>
+    <input type="submit" value="Insert record"/>
+
+    {% if messages %}
+    {% for message in messages %}
+    <h2 style='color:green'>{{message}}</h2>
+    {% endfor %}
+    
+    {% endif %}
+
+
+    <input type="submit">
+</form>
+
+
+{% endblock  %}
